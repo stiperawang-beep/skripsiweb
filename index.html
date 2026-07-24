@@ -366,6 +366,70 @@
             color: var(--apple-green); margin-bottom: 8px;
         }
         .conclusion-box p { font-size: 1.1em !important; margin: 0; line-height: 1.6; color: var(--text-primary); }
+
+        /* ═══ RESPONSIVE DESIGN (MOBILE & TABLET) ═══ */
+        @media (max-width: 1200px) {
+            .hero-title { font-size: 4.5em; }
+            .reveal h2 { font-size: 2.8em; }
+            .bento-grid-3, .bento-grid-4 { grid-template-columns: 1fr 1fr; }
+            .apple-table { font-size: 0.9em !important; }
+        }
+        
+        @media (max-width: 768px) {
+            /* Full height scrolling for mobile */
+            .reveal .slides section { 
+                padding: 30px 20px 80px 20px !important; 
+                height: 100vh !important;
+                overflow-y: auto !important; 
+                overflow-x: hidden !important;
+                -webkit-overflow-scrolling: touch;
+            }
+            .reveal .slides section.center-slide {
+                display: flex; flex-direction: column; justify-content: center; min-height: 100vh; height: auto !important;
+            }
+
+            /* Typography */
+            .hero-title { font-size: 3em; line-height: 1.2; }
+            .reveal h2 { font-size: 2em; margin-bottom: 25px; }
+            .reveal h3 { font-size: 1.3em; margin-bottom: 30px !important; }
+            .reveal p, .reveal li { font-size: 1.05em; }
+            
+            /* Grids */
+            .bento-grid-2, .bento-grid-3, .bento-grid-4 { grid-template-columns: 1fr; gap: 20px; }
+            .bento-box { padding: 25px; }
+            
+            /* Flow Diagram */
+            .flow-3d { flex-direction: column; gap: 15px; margin-top: 20px; }
+            .flow-card-3d { font-size: 1.2em !important; padding: 20px 25px !important; width: 100%; box-sizing: border-box; }
+            .flow-arrow-3d { transform: rotate(90deg); margin: 5px 0; }
+            @keyframes arrow3D { 
+                0%{transform:rotate(90deg) translateX(-10px) translateZ(0); color:#D1D1D6} 
+                50%{transform:rotate(90deg) translateX(10px) translateZ(20px); color:var(--apple-blue); filter:drop-shadow(0 4px 15px rgba(0,122,255,0.3))} 
+                100%{transform:rotate(90deg) translateX(-10px) translateZ(0); color:#D1D1D6} 
+            }
+            
+            /* Components */
+            .author-card-3d { padding: 15px 25px; flex-direction: column; text-align: center; border-radius: 30px; }
+            .quote-card-3d { padding: 40px 25px; border-radius: 25px; }
+            
+            /* Tables */
+            .table-3d-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 15px; padding: 4px; }
+            .apple-table { font-size: 0.85em !important; min-width: 500px; }
+            .apple-table thead th, .apple-table tbody td { padding: 10px; }
+            
+            /* Stats & Icons */
+            .stat-3d-ring { width: 120px; height: 120px; }
+            .stat-3d-value h3 { font-size: 2.5em !important; }
+            .icon-3d-wrapper { width: 60px; height: 60px; font-size: 2em; border-radius: 18px; margin-bottom: 15px; }
+            
+            /* Theory/Conclusion Boxes */
+            .theory-box, .conclusion-box { padding: 15px; border-radius: 0 15px 15px 0; margin: 10px 0; }
+            .theory-box p, .conclusion-box p { font-size: 1em !important; }
+
+            /* Background Performance Optimization */
+            .orb-1, .orb-2 { width: 400px; height: 400px; }
+            .orb-3, .orb-4 { display: none; }
+        }
     </style>
 </head>
 <body>
@@ -984,9 +1048,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.js"></script>
     <script>
         Reveal.initialize({
-            controls: true, progress: true, center: true, hash: true,
+            controls: true, progress: true, center: false, hash: true,
             transition: 'none', transitionSpeed: 'fast',
-            width: 1920, height: 1080, margin: 0.01, minScale: 0.2, maxScale: 3.0,
+            width: '100%', height: '100%', margin: 0, minScale: 1, maxScale: 1,
             autoAnimateEasing: 'cubic-bezier(0.2, 0.8, 0.2, 1)',
             autoAnimateDuration: 0.8,
             autoAnimateUnmatched: true
