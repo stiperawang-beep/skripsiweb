@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentasi Skripsi - Apple Mac OS Ultimate UI</title>
+    <!-- Reveal.js Core -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+    
+    <!-- Remix Icon (Ultra Clean, Sharp Icons) -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- Ultimate Premium Fonts: Cabinet Grotesk (Powerful Headings) & Inter (Clean Body) -->
+    <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,900,700,500,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* === APPLE MAC OS ULTIMATE GLASSMORPHISM SYSTEM === */
+        :root {
+            --text-primary: #1D1D1F;  /* Apple Dark Gray */
+            --text-secondary: #86868B; /* Apple Muted Gray */
+            --bg-base: #F5F5F7;
+            
+            /* Apple Vibrant Accents */
+            --apple-blue: #007AFF;
+            --apple-purple: #AF52DE;
+            --apple-pink: #FF2D55;
+            --apple-orange: #FF9500;
+            --apple-green: #34C759;
+            --apple-cyan: #32ADE6;
+
+            --bento-bg: rgba(255, 255, 255, 0.65);
+            --bento-border: rgba(255, 255, 255, 0.9);
+            --bento-border-hover: #FFFFFF;
+        }
+
+        html, body {
+            background-color: var(--bg-base) !important;
+            color: var(--text-primary) !important;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+            overflow: hidden;
+            margin: 0; padding: 0;
+        }
+
+        .reveal { background: transparent !important; color: var(--text-primary) !important; }
+
+        /* 1. MACOS LIQUID RETINA ABSTRACT BACKGROUND */
+        .mac-bg {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -2;
+            background: linear-gradient(125deg, #F9F0FF 0%, #E6F4FF 50%, #FFF0F5 100%);
+            overflow: hidden;
+        }
+        
+        .mac-shape-1 {
+            position: absolute; width: 120vw; height: 120vh;
+            background: radial-gradient(circle, rgba(142, 197, 252, 0.65) 0%, transparent 60%);
+            top: -30%; left: -20%; filter: blur(90px);
+            animation: breathe 20s infinite alternate ease-in-out;
+        }
+        .mac-shape-2 {
+            position: absolute; width: 110vw; height: 110vh;
+            background: radial-gradient(circle, rgba(224, 195, 252, 0.65) 0%, transparent 60%);
+            bottom: -30%; right: -20%; filter: blur(100px);
+            animation: breathe 25s infinite alternate-reverse ease-in-out;
+        }
+        .mac-shape-3 {
+            position: absolute; width: 90vw; height: 90vh;
+            background: radial-gradient(circle, rgba(255, 182, 193, 0.5) 0%, transparent 60%);
+            top: 10%; left: 30%; filter: blur(110px);
+            animation: breathe 22s infinite alternate ease-in-out;
+        }
+
+        @keyframes breathe {
+            0% { transform: scale(1) translate(0,0); }
+            100% { transform: scale(1.1) translate(40px, 30px); }
+        }
+
+        /* Noise Texture for that ultra-premium Apple frosted look */
+        .mac-noise {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1;
+            opacity: 0.02; mix-blend-mode: multiply; pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        /* 2. TYPOGRAPHY (Apple Style Cleanliness) */
+        .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+            font-family: 'Cabinet Grotesk', -apple-system, BlinkMacSystemFont, sans-serif !important;
+            text-transform: none; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 25px;
+            color: var(--text-primary);
+        }
+        .reveal h2 { 
+            font-size: 3.5em; margin-bottom: 40px; text-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+        .reveal h2 i {
+            vertical-align: middle; margin-right: 15px;
+        }
+        .reveal p, .reveal li { font-size: 1.4em; line-height: 1.6; font-weight: 400; color: var(--text-secondary); }
+        .reveal b, .reveal strong { font-weight: 700; color: var(--text-primary); }
+
+        /* MAC OS GLOWING GRADIENTS */
+        .glow-apple-1 {
+            background: linear-gradient(110deg, var(--apple-blue), var(--apple-cyan));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .glow-apple-2 {
+            background: linear-gradient(110deg, var(--apple-purple), var(--apple-pink));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .glow-apple-3 {
+            background: linear-gradient(110deg, var(--apple-orange), var(--apple-pink));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+
+        .icon-accent {
+            background: linear-gradient(135deg, var(--apple-blue), var(--apple-purple));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 4px 10px rgba(0, 122, 255, 0.25));
+        }
+
+        /* 3. INVISIBLE SLIDE CONTAINER */
+        .reveal .slides section {
+            background: transparent;
+            padding: 20px 40px !important;
+            width: 100% !important; max-width: 1850px;
+            left: 50% !important; transform: translateX(-50%) !important; box-sizing: border-box;
+            text-align: left;
+        }
+        .reveal .slides section.center-slide { text-align: center; }
+
+        /* 4. MAC OS FROSTED GLASS BENTO BOXES */
+        .bento-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .bento-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; }
+        .bento-grid-4 { display: grid; grid-template-columns: 1.5fr 1fr; gap: 30px; }
+
+        .bento-wrapper { height: 100%; box-sizing: border-box; }
+        .bento-box {
+            background: var(--bento-bg); height: 100%; box-sizing: border-box;
+            backdrop-filter: blur(50px) saturate(200%); -webkit-backdrop-filter: blur(50px) saturate(200%);
+            border-radius: 36px; padding: 45px;
+            border: 1px solid var(--bento-border);
+            box-shadow: 
+                0 25px 50px rgba(0,0,0,0.04), 
+                0 1px 3px rgba(0,0,0,0.03),
+                inset 0 2px 20px rgba(255,255,255,0.8);
+            transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+            position: relative; overflow: hidden;
+            display: flex; flex-direction: column; justify-content: center;
+        }
+        
+        .bento-box:hover {
+            transform: translateY(-5px) scale(1.01);
+            border-color: var(--bento-border-hover);
+            box-shadow: 
+                0 35px 70px rgba(0,0,0,0.06), 
+                0 1px 5px rgba(0,0,0,0.02),
+                inset 0 2px 20px rgba(255,255,255,1);
+        }
+
+        /* Icons inside Bento Boxes */
+        .bento-icon-wrapper {
+            background: #FFFFFF;
+            border: 1px solid rgba(0,0,0,0.05);
+            width: 80px; height: 80px; border-radius: 26px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 2.5em; margin-bottom: 25px;
+            box-shadow: 0 12px 25px rgba(0,0,0,0.04);
+        }
+
+        /* 5. APPLE-STYLE DATA GRIDS (TABLES) */
+        .table-wrapper {
+            background: #FFFFFF; border-radius: 28px; padding: 15px;
+            border: 1px solid rgba(0,0,0,0.05); margin-bottom: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.02);
+        }
+        .apple-table {
+            width: 100%; border-collapse: separate; border-spacing: 0; font-size: 1.15em; text-align: left;
+        }
+        .apple-table thead th {
+            color: var(--text-secondary); font-weight: 600; padding: 18px 20px;
+            border-bottom: 1px solid rgba(0,0,0,0.06); background: transparent;
+            text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.8em;
+            font-family: 'Inter', sans-serif;
+        }
+        .apple-table tbody td {
+            padding: 18px 20px; border-bottom: 1px solid rgba(0,0,0,0.03); color: var(--text-primary);
+            font-variant-numeric: tabular-nums; transition: all 0.3s ease; font-weight: 500;
+        }
+        .apple-table tbody tr { transition: background 0.3s ease, transform 0.3s ease; border-radius: 12px; }
+        .apple-table tbody tr:hover {
+            background-color: #F5F5F7; transform: scale(1.015);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03); position: relative; z-index: 10;
+        }
+        .apple-table tbody tr:last-child td { border-bottom: none; }
+        
+        /* Smooth Apple Badges */
+        .badge-cyan { background: #E5F3FF; color: var(--apple-blue); padding: 6px 16px; border-radius: 20px; font-weight: 700; font-size: 0.9em; border: 1px solid rgba(0,122,255,0.1); }
+        .badge-purple { background: #F4E8FF; color: var(--apple-purple); padding: 6px 16px; border-radius: 20px; font-weight: 700; font-size: 0.9em; border: 1px solid rgba(175,82,222,0.1); }
+        .badge-green { background: #E8F8EE; color: var(--apple-green); padding: 6px 16px; border-radius: 20px; font-weight: 700; font-size: 0.9em; border: 1px solid rgba(52,199,89,0.1); }
+
+        /* Flowchart */
+        .modern-flow { display: flex; align-items: center; justify-content: center; gap: 40px; margin-top: 30px;}
+        .flow-card { 
+            background: #FFFFFF; padding: 30px 50px; border-radius: 24px; 
+            border: 1px solid rgba(0,0,0,0.05); font-family: 'Cabinet Grotesk', sans-serif;
+            font-weight: 800; font-size: 2em; color: var(--text-primary); box-shadow: 0 15px 30px rgba(0,0,0,0.03);
+            display: flex; flex-direction: column; align-items: center; gap: 15px;
+        }
+        .flow-arrow { font-size: 4em; color: #D1D1D6; animation: floatHorizontal 3s infinite ease-in-out; }
+        @keyframes floatHorizontal { 0% { transform: translateX(-10px); } 50% { transform: translateX(10px); color: var(--apple-blue);} 100% { transform: translateX(-10px); } }
+
+        /* ==========================================================================
+           6. CREATIVE ENTRANCE ANIMATIONS (Keynote Style)
+           ========================================================================== */
+        
+        /* Initial state hidden */
+        .anim-fade-up, .anim-zoom-in, .anim-slide-right, .anim-slide-left, .anim-scale-up { opacity: 0; }
+        
+        /* Trigger animations ONLY when section has .present class (Reveal.js active slide) */
+        .reveal .slides section.present .anim-fade-up { animation: fadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        .reveal .slides section.present .anim-zoom-in { animation: zoomIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        .reveal .slides section.present .anim-slide-right { animation: slideRight 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        .reveal .slides section.present .anim-slide-left { animation: slideLeft 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        .reveal .slides section.present .anim-scale-up { animation: scaleUp 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+        
+        /* Stagger Delays for beautiful cascading effect */
+        .delay-1 { animation-delay: 0.15s !important; }
+        .delay-2 { animation-delay: 0.3s !important; }
+        .delay-3 { animation-delay: 0.45s !important; }
+        .delay-4 { animation-delay: 0.6s !important; }
+        .delay-5 { animation-delay: 0.75s !important; }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(60px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes zoomIn {
+            from { opacity: 0; transform: scale(0.85) translateY(30px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        @keyframes slideRight {
+            from { opacity: 0; transform: translateX(-80px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slideLeft {
+            from { opacity: 0; transform: translateX(80px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes scaleUp {
+            from { opacity: 0; transform: scale(0.6); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        
+        /* Continuous floating animation for icons/accents */
+        .anim-floating { animation: floatVertical 6s ease-in-out infinite; display: inline-block; }
+        @keyframes floatVertical {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- MACOS LIQUID RETINA BACKGROUND -->
+    <div class="mac-bg"></div>
+    <div class="mac-shape-1"></div>
+    <div class="mac-shape-2"></div>
+    <div class="mac-shape-3"></div>
+    <div class="mac-noise"></div>
+
+    <div class="reveal">
+        <div class="slides">
+            
+            <!-- 1. TITLE SLIDE (Cinematic Center) -->
+            <section class="center-slide" data-auto-animate>
+                <div class="anim-fade-up" style="display: inline-block; padding: 12px 30px; border-radius: 30px; border: 1px solid rgba(0,0,0,0.05); background: rgba(255,255,255,0.7); margin-bottom: 30px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); backdrop-filter: blur(10px);">
+                    <p style="margin:0; font-size: 1.1em; letter-spacing: 4px; text-transform: uppercase; color: var(--text-secondary); font-weight: 700;">Seminar Hasil Skripsi</p>
+                </div>
+                <h1 class="anim-zoom-in delay-1" style="font-size: 6.5em; line-height: 1.15; margin-bottom: 20px; text-shadow: 0 15px 35px rgba(0,0,0,0.04);">
+                    Pengaruh <span class="glow-apple-1">Promosi</span><br>Terhadap <span class="glow-apple-2">Minat Beli</span>
+                </h1>
+                <h3 class="anim-fade-up delay-2" style="color: var(--text-secondary); font-weight: 500; font-size: 2.2em; font-family: 'Inter', sans-serif !important; margin-bottom: 80px;">Konsumen Rumah Makan Langkat di Tualang Siak</h3>
+                
+                <div class="anim-scale-up delay-3" style="display: inline-block;">
+                    <div class="bento-box" style="display: inline-flex; flex-direction: row; align-items: center; gap: 30px; padding: 20px 50px; border-radius: 50px; width: auto; background: rgba(255,255,255,0.9); border: 1px solid #FFFFFF;">
+                        <div class="anim-floating" style="background: linear-gradient(135deg, var(--apple-blue), var(--apple-cyan)); width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.8em; color: white; box-shadow: 0 10px 20px rgba(0, 122, 255, 0.3);">
+                            <i class="ri-user-star-fill"></i>
+                        </div>
+                        <div style="text-align: left;">
+                            <p style="margin:0; font-weight: 800; font-size: 1.8em; color: var(--text-primary);">Anisa Fitriani</p>
+                            <p style="margin:0; font-size: 1.2em; color: var(--apple-blue); font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: 1px;">NIM: 236101222</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. LATAR BELAKANG -->
+            <section data-auto-animate>
+                <h2 class="anim-slide-right"><i class="ri-lightbulb-flash-fill icon-accent anim-floating"></i> Latar Belakang Masalah</h2>
+                <div class="bento-grid-4">
+                    <div class="bento-wrapper anim-slide-right delay-1">
+                        <div class="bento-box">
+                            <div class="bento-icon-wrapper" style="color: var(--apple-blue); box-shadow: 0 10px 20px rgba(0,122,255,0.1);"><i class="ri-megaphone-fill"></i></div>
+                            <h4 style="font-size: 2em; color: var(--text-primary);">Kondisi Saat Ini</h4>
+                            <p>Strategi promosi Rumah Makan Langkat masih didominasi oleh penyampaian dari mulut ke mulut <b>(word of mouth)</b> dan pelayanan langsung, serta kerja sama dengan instansi sekitar.</p>
+                            <p>Pemanfaatan media promosi seperti iklan di <b>media sosial, diskon penjualan, dan pemasaran langsung</b> terstruktur masih belum dilakukan secara optimal.</p>
+                        </div>
+                    </div>
+                    <div class="bento-wrapper anim-slide-left delay-2">
+                        <div class="bento-box" style="background: linear-gradient(145deg, #FFFFFF, rgba(255,255,255,0.7)); border: 1px solid #FFFFFF;">
+                            <div class="bento-icon-wrapper anim-floating" style="color: white; background: linear-gradient(135deg, var(--apple-purple), var(--apple-pink)); border:none; box-shadow: 0 10px 20px rgba(175,82,222,0.25);"><i class="ri-question-mark"></i></div>
+                            <h4 style="font-size: 2em; color: var(--text-primary);">Pertanyaan Utama</h4>
+                            <p style="font-size: 1.3em;">Sejauh mana efektivitas promosi yang telah dilakukan berpengaruh terhadap minat beli konsumen?</p>
+                            <p style="font-size: 1.3em; color: var(--text-primary); font-weight: 700;">Apakah diversifikasi kegiatan promosi dapat mendorong minat beli yang lebih tinggi?</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. DATA TABEL 1.1 -->
+            <section data-auto-animate>
+                <h2 class="anim-slide-right"><i class="ri-layout-grid-fill icon-accent"></i> Fenomena: Data Pemasangan (Tabel 1.1)</h2>
+                <div class="bento-wrapper anim-zoom-in delay-1">
+                    <div class="bento-box" style="padding: 30px;">
+                        <div class="table-wrapper">
+                            <table class="apple-table" style="font-size: 1.3em;">
+                                <thead>
+                                    <tr><th>NO</th><th>Tahun</th><th>Client</th><th>Jenis Pekerjaan</th><th>Tukang Ahli</th><th>Pekerja</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="anim-fade-up delay-1"><td>1</td><td>2020</td><td>PT. Lontar Papyrus Pulp & Paper</td><td><span class="badge-cyan">Pemasangan Batu Api</span></td><td>10</td><td>50</td></tr>
+                                    <tr class="anim-fade-up delay-2"><td>2</td><td>2021</td><td>PT. Indah Kiat Pulp & Paper</td><td><span class="badge-cyan">Pemasangan Batu Api</span></td><td>10</td><td>50</td></tr>
+                                    <tr class="anim-fade-up delay-3"><td>3</td><td>2022</td><td>PT. Riau Andalan Pulp & Paper</td><td><span class="badge-cyan">Pemasangan Batu Api</span></td><td>10</td><td>50</td></tr>
+                                    <tr class="anim-fade-up delay-4"><td>4</td><td>2023</td><td>PT. Toba Pulp Lestari</td><td><span class="badge-cyan">Pemasangan Batu Api</span></td><td>10</td><td>50</td></tr>
+                                    <tr class="anim-fade-up delay-5"><td>5</td><td>2024</td><td>PT. PLI Surya Dumai</td><td><span class="badge-cyan">Pemasangan Batu Api</span></td><td>10</td><td>50</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. DATA TABEL 1.2 -->
+            <section data-auto-animate>
+                <h2 class="anim-slide-right"><i class="ri-bar-chart-box-fill icon-accent"></i> Fenomena: Data Kompensasi (Tabel 1.2)</h2>
+                <div class="bento-wrapper anim-zoom-in delay-1">
+                    <div class="bento-box" style="padding: 30px;">
+                        <div class="table-wrapper">
+                            <table class="apple-table" style="font-size: 1.2em;">
+                                <thead>
+                                    <tr><th>No</th><th>Tahun</th><th>Jml Kry</th><th>Gaji Pokok (Rp)</th><th>Tunj. Transport (Rp)</th><th>Tunj. Pengobatan (Rp)</th><th>THR (Rp)</th><th>Total Kompensasi (Rp)</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="anim-fade-up delay-1"><td>1</td><td>2020</td><td>50</td><td>1,996,273,790</td><td>199,627,396</td><td>359,329,313</td><td>216,133,920</td><td><span class="badge-purple">2,771,364,419</span></td></tr>
+                                    <tr class="anim-fade-up delay-2"><td>2</td><td>2021</td><td>50</td><td>2,184,158,382</td><td>218,415,857</td><td>393,148,542</td><td>236,475,936</td><td><span class="badge-purple">3,032,198,717</span></td></tr>
+                                    <tr class="anim-fade-up delay-3"><td>3</td><td>2022</td><td>50</td><td>2,131,129,530</td><td>203,112,972</td><td>351,603,350</td><td>221,561,440</td><td><span class="badge-purple">2,907,407,292</span></td></tr>
+                                    <tr class="anim-fade-up delay-4"><td>4</td><td>2023</td><td>50</td><td>2,207,643,956</td><td>220,764,414</td><td>397,375,946</td><td>239,018,688</td><td><span class="badge-purple">3,064,803,004</span></td></tr>
+                                    <tr class="anim-fade-up delay-5"><td>5</td><td>2024</td><td>50</td><td>2,308,557,400</td><td>204,855,760</td><td>362,740,368</td><td>224,275,200</td><td><span class="badge-purple">3,100,428,728</span></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. RUMUSAN MASALAH -->
+            <section class="center-slide" data-auto-animate>
+                <div class="bento-wrapper anim-zoom-in">
+                    <div class="bento-box" style="padding: 100px; max-width: 1200px; margin: 0 auto; background: #FFFFFF; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 40px 80px rgba(0,0,0,0.05);">
+                        <i class="ri-double-quotes-l anim-floating" style="font-size: 6em; color: var(--apple-blue); opacity: 0.08; position:absolute; top:40px; left:40px;"></i>
+                        <h3 class="anim-fade-up delay-1" style="color: var(--text-secondary); letter-spacing: 4px; text-transform: uppercase; font-size: 1.5em; margin-bottom:30px; font-family: 'Inter', sans-serif; font-weight: 600;">Rumusan Masalah</h3>
+                        <h2 class="anim-fade-up delay-2" style="font-size: 4em; line-height: 1.3; margin:0; justify-content: center; text-align:center;">
+                            "Bagaimana <span class="glow-apple-1">pengaruh promosi</span> terhadap <span class="glow-apple-2">minat beli konsumen</span> pada Rumah Makan Langkat Siak?"
+                        </h2>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. MANFAAT PENELITIAN -->
+            <section data-auto-animate>
+                <h2 class="anim-slide-right"><i class="ri-gift-fill icon-accent"></i> Manfaat Penelitian</h2>
+                <div class="bento-grid-3">
+                    <div class="bento-wrapper anim-fade-up delay-1">
+                        <div class="bento-box">
+                            <div class="bento-icon-wrapper" style="color: white; background: linear-gradient(135deg, var(--apple-orange), var(--apple-pink)); border:none; box-shadow: 0 10px 25px rgba(255,149,0,0.3);"><i class="ri-store-2-fill"></i></div>
+                            <h4 style="font-size: 1.8em;">Bagi Rumah Makan</h4>
+                            <p>Menjadi masukan strategis dalam merancang program promosi yang lebih tepat sasaran guna meningkatkan daya saing bisnis.</p>
+                        </div>
+                    </div>
+                    <div class="bento-wrapper anim-fade-up delay-2">
+                        <div class="bento-box">
+                            <div class="bento-icon-wrapper" style="color: white; background: linear-gradient(135deg, var(--apple-green), var(--apple-blue)); border:none; box-shadow: 0 10px 25px rgba(52,199,89,0.3);"><i class="ri-book-open-fill"></i></div>
+                            <h4 style="font-size: 1.8em;">Bagi Akademisi</h4>
+                            <p>Menjadi referensi utama dan literatur berharga untuk penulis karya ilmiah atau skripsi sejenisnya di masa depan.</p>
+                        </div>
+                    </div>
+                    <div class="bento-wrapper anim-fade-up delay-3">
+                        <div class="bento-box">
+                            <div class="bento-icon-wrapper" style="color: white; background: linear-gradient(135deg, var(--apple-purple), var(--apple-blue)); border:none; box-shadow: 0 10px 25px rgba(175,82,222,0.3);"><i class="ri-user-star-fill"></i></div>
+                            <h4 style="font-size: 1.8em;">Bagi Peneliti</h4>
+                            <p>Memperdalam wawasan keilmuan dan mengaplikasikan teori secara praktis di bidang manajemen pemasaran.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. PENELITIAN TERDAHULU -->
+            <section data-auto-animate>
+                <h2 class="anim-slide-right"><i class="ri-history-line icon-accent"></i> Matriks Penelitian Terdahulu</h2>
+                <div class="bento-wrapper anim-zoom-in delay-1">
+                    <div class="bento-box" style="padding: 25px;">
+                        <div class="table-wrapper" style="height: 600px; overflow-y: auto;">
+                            <table class="apple-table" style="font-size: 1.15em;">
+                                <thead>
+                                    <tr><th>No</th><th>Peneliti & Tahun</th><th>Judul Penelitian</th><th>Variabel</th><th>Metode</th><th>Hasil Penelitian</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="anim-fade-up delay-1"><td>1</td><td>Ramadhan & Utami (2019)</td><td>Pengaruh promosi terhadap minat beli konsumen</td><td>Promosi (X), Minat Beli (Y)</td><td><span class="badge-cyan">Kuantitatif</span></td><td>Promosi berpengaruh positif dan signifikan terhadap minat beli</td></tr>
+                                    <tr class="anim-fade-up delay-2"><td>2</td><td>Tampubolon</td><td>Strategi promosi dalam meningkatkan minat beli konsumen</td><td>Promosi (X), Minat Beli (Y)</td><td><span class="badge-cyan">Kuantitatif</span></td><td>Strategi promosi yang tepat mampu meningkatkan minat beli</td></tr>
+                                    <tr class="anim-fade-up delay-3"><td>3</td><td>Sari & Hidayat (2020)</td><td>Pengaruh Promosi media sosial terhadap Minat konsumen</td><td>Promosi (X), Minat Beli (Y)</td><td><span class="badge-cyan">Kuantitatif</span></td><td>Promosi media sosial berpengaruh positif dan signifikan</td></tr>
+                                    <tr class="anim-fade-up delay-4"><td>4</td><td>Nugroho & Setiawan (2022)</td><td>Pengaruh iklan dan promosi penjualan UMKM</td><td>Iklan, Promosi, Minat Beli</td><td><span class="badge-cyan">Kuantitatif</span></td><td>Iklan dan promosi penjualan secara simultan berpengaruh signifikan</td></tr>
+                                    <tr class="anim-fade-up delay-5"><td>5</td><td>Oktavia & Fauzi (2023)</td><td>Efektivitas promosi pada rumah makan di Pekanbaru</td><td>Promosi (X), Minat Beli (Y)</td><td><span class="badge-purple">Kuantitatif Deskriptif</span></td><td>Promosi berpengaruh positif signifikan terhadap minat beli</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. KERANGKA BERPIKIR -->
+            <section class="center-slide" data-auto-animate>
+                <h2 class="anim-fade-up" style="justify-content: center; text-align: center; margin-bottom: 50px;"><i class="ri-node-tree icon-accent"></i> Kerangka Berpikir</h2>
+                <div class="modern-flow">
+                    <div class="anim-slide-right delay-1">
+                        <div class="flow-card">
+                            <div class="bento-icon-wrapper" style="color: white; background: linear-gradient(135deg, var(--apple-blue), var(--apple-cyan)); margin:0; border:none; box-shadow: 0 10px 20px rgba(0,122,255,0.3); width: 80px; height: 80px;"><i class="ri-megaphone-fill"></i></div>
+                            Promosi (X)
+                        </div>
+                    </div>
+                    <div class="flow-arrow anim-fade-up delay-2"><i class="ri-arrow-right-line"></i></div>
+                    <div class="anim-slide-left delay-3">
+                        <div class="flow-card">
+                            <div class="bento-icon-wrapper" style="color: white; background: linear-gradient(135deg, var(--apple-pink), var(--apple-orange)); margin:0; border:none; box-shadow: 0 10px 20px rgba(255,45,85,0.3); width: 80px; height: 80px;"><i class="ri-shopping-cart-fill"></i></div>
+                            Minat Beli (Y)
+                        </div>
+                    </div>
+                </div>
+                <p class="anim-fade-up delay-4" style="margin-top:60px; font-size:1.6em; color:var(--text-secondary); max-width: 800px; margin-left:auto; margin-right:auto;">Model konseptual ini memvisualisasikan pengaruh langsung dari variabel independen (Promosi) terhadap variabel dependen (Minat Beli).</p>
+            </section>
+
+            <!-- 9. METODE PENELITIAN -->
+            <section data-auto-animate>
+                <h2 class="anim-slide-right"><i class="ri-flask-fill icon-accent"></i> Metodologi Penelitian</h2>
+                <div class="bento-grid-2">
+                    <div class="bento-wrapper anim-slide-right delay-1">
+                        <div class="bento-box">
+                            <div class="bento-icon-wrapper" style="color: var(--apple-blue); box-shadow: 0 10px 20px rgba(0,122,255,0.1);"><i class="ri-map-pin-time-fill"></i></div>
+                            <h4 style="font-size: 2em;">Ruang Lingkup</h4>
+                            <p style="margin-bottom:10px;"><b style="color:var(--text-primary);">Lokasi:</b> Rumah Makan Langkat, Kec. Tualang, Kab. Siak, Riau.</p>
+                            <p style="margin-bottom:10px;"><b style="color:var(--text-primary);">Waktu:</b> Dilaksanakan pada tahun 2026.</p>
+                            <p><b style="color:var(--text-primary);">Jenis Penelitian:</b> Pendekatan Kuantitatif.</p>
+                        </div>
+                    </div>
+                    <div class="bento-wrapper anim-slide-left delay-2">
+                        <div class="bento-box">
+                            <div class="bento-icon-wrapper" style="color: var(--apple-purple); box-shadow: 0 10px 20px rgba(175,82,222,0.1);"><i class="ri-group-fill"></i></div>
+                            <h4 style="font-size: 2em;">Data & Sampel</h4>
+                            <p style="margin-bottom:10px;"><b style="color:var(--text-primary);">Sumber & Pengumpulan:</b> Data Primer & Sekunder via Kuesioner.</p>
+                            <p style="margin-bottom:10px;"><b style="color:var(--text-primary);">Populasi:</b> ± 200 pelanggan per hari.</p>
+                            <p><b style="color:var(--text-primary);">Sampel:</b> <span class="badge-cyan" style="font-size: 1.1em; padding: 2px 10px;">96 Responden</span> (Teknik rumus Lemeshow).</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 10. KARAKTERISTIK RESPONDEN -->
+            <section data-auto-animate>
+                <h2 class="anim-slide-right"><i class="ri-pie-chart-2-fill icon-accent"></i> Profil Demografi Responden</h2>
+                <div class="bento-grid-2">
+                    <div class="bento-wrapper anim-slide-right delay-1">
+                        <div class="bento-box" style="padding: 30px;">
+                            <h4 style="font-size: 1.6em; margin-bottom:15px;">Tabel 5.1 Jenis Kelamin</h4>
+                            <div class="table-wrapper">
+                                <table class="apple-table">
+                                    <thead><tr><th>Jenis Kelamin</th><th>Jumlah</th><th>Persentase</th></tr></thead>
+                                    <tbody>
+                                        <tr><td>Laki-laki</td><td>45</td><td>46,87%</td></tr>
+                                        <tr><td>Perempuan</td><td>51</td><td>53,13%</td></tr>
+                                        <tr style="background:#F5F5F7;"><td style="font-weight:700; color:var(--text-primary);">Total</td><td style="font-weight:700; color:var(--text-primary);">96</td><td><span class="badge-cyan">100%</span></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <h4 style="font-size: 1.6em; margin-top:20px; margin-bottom:15px;">Tabel 5.2 Pendidikan / Jabatan</h4>
+                            <div class="table-wrapper">
+                                <table class="apple-table">
+                                    <thead><tr><th>Jabatan</th><th>Jumlah</th><th>Persentase</th></tr></thead>
+                                    <tbody>
+                                        <tr><td>Pelajar/Mahasiswa</td><td>28</td><td>29,16%</td></tr>
+                                        <tr><td>Karyawan Swasta</td><td>26</td><td>27,08%</td></tr>
+                                        <tr><td>Wiraswasta</td><td>22</td><td>22,9%</td></tr>
+                                        <tr><td>Lainnya</td><td>20</td><td>20,8%</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bento-wrapper anim-slide-left delay-2">
+                        <div class="bento-box" style="padding: 30px;">
+                            <h4 style="font-size: 1.6em; margin-bottom:15px;">Tabel 5.1 Rentang Usia</h4>
+                            <div class="table-wrapper">
+                                <table class="apple-table">
+                                    <thead><tr><th>Usia</th><th>Jumlah</th><th>Persentase</th></tr></thead>
+                                    <tbody>
+                                        <tr><td>&lt; 20 Tahun</td><td>15</td><td>15,6%</td></tr>
+                                        <tr><td style="color:var(--apple-blue); font-weight:700;">20 - 30 Tahun</td><td style="color:var(--apple-blue); font-weight:700;">55</td><td><span class="badge-cyan">57,3%</span></td></tr>
+                                        <tr><td>31 - 40 Tahun</td><td>15</td><td>15,6%</td></tr>
+                                        <tr><td>&gt; 40 Tahun</td><td>11</td><td>11,4%</td></tr>
+                                        <tr style="background:#F5F5F7;"><td style="font-weight:700; color:var(--text-primary);">Total</td><td style="font-weight:700; color:var(--text-primary);">96</td><td><span class="badge-cyan">100%</span></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <div style="background: linear-gradient(135deg, rgba(0,122,255,0.05), rgba(175,82,222,0.05)); border: 1px solid rgba(0,122,255,0.1); border-radius: 20px; padding: 25px; margin-top: 20px;">
+                                <p style="font-size: 1.3em; margin:0; line-height:1.6; color:var(--text-primary);">Insight: Dominasi konsumen adalah <b style="color:var(--apple-blue);">Perempuan (53%)</b> dari kelompok <b style="color:var(--apple-purple);">Generasi Milenial/Z (20-30 Tahun)</b> dengan profesi utama sebagai <b style="color:var(--apple-blue);">Pelajar/Mahasiswa</b>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 11. UJI VALIDITAS -->
+            <section data-auto-animate>
+                <h2 class="anim-slide-right"><i class="ri-shield-check-fill icon-accent"></i> Hasil Uji Validitas Instrumen</h2>
+                <div class="bento-grid-2">
+                    <div class="bento-wrapper anim-zoom-in delay-1">
+                        <div class="bento-box" style="padding: 25px;">
+                            <div class="table-wrapper" style="margin:0;">
+                                <table class="apple-table" style="font-size:1.2em;">
+                                    <thead><tr><th>Variabel</th><th>Item</th><th>r hitung</th><th>Hasil</th></tr></thead>
+                                    <tbody>
+                                        <tr><td rowspan="8" style="font-weight:700; color:var(--text-primary); border-right: 1px solid rgba(0,0,0,0.05);">Promosi (X)</td><td>X.1</td><td>0,943**</td><td><span class="badge-green">Valid</span></td></tr>
+                                        <tr><td>X.2</td><td>0,945**</td><td><span class="badge-green">Valid</span></td></tr>
+                                        <tr><td>X.3</td><td>0,923**</td><td><span class="badge-green">Valid</span></td></tr>
+                                        <tr><td>X.4</td><td>0,939**</td><td><span class="badge-green">Valid</span></td></tr>
+                                        <tr><td>X.5</td><td>0,964**</td><td><span class="badge-green">Valid</span></td></tr>
+                                        <tr><td>X.6</td><td>0,925**</td><td><span class="badge-green">Valid</span></td></tr>
+                                        <tr><td>X.7</td><td>0,961**</td><td><span class="badge-green">Valid</span></td></tr>
+                                        <tr><td>X.8</td><td>0,950**</td><td><span class="badge-green">Valid</span></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bento-wrapper anim-zoom-in delay-2">
+                        <div class="bento-box" style="padding: 25px;">
+                            <div class="table-wrapper" style="margin:0;">
+                                <table class="apple-table" style="font-size:1.2em;">
+                                    <thead><tr><th>Variabel</th><th>Item</th><th>r hitung</th><th>Hasil</th></tr></thead>
+                                    <tbody>
+                                        <tr><td rowspan="8" style="font-weight:700; color:var(--text-primary); border-right: 1px solid rgba(0,0,0,0.05);">Minat Beli (Y)</td><td>Y.1</td><td>0,944**</td><td><span class="badge-green">Valid</span></td></tr>
+                                        <tr><td>Y.2</td><td>0,940**</td><td><span class="badge-green">Valid</span></td></tr>
+                                        <tr><td>Y.3</td><td>0,952**</td><td><span class="badge-green">Valid</span></td></tr>
+                                        <tr><td>Y.4</td><td>0,945**</td><td><span class="badge-green">Valid</span></td></tr>
+                                        <tr><td>Y.5</td><td>0,969**</td><td><span class="badge-green">Valid</span></td></tr>
+                                        <tr><td>Y.6</td><td>0,961**</td><td><span class="badge-green">Valid</span></td></tr>
+                                        <tr><td>Y.7</td><td>0,939**</td><td><span class="badge-green">Valid</span></td></tr>
+                                        <tr><td>Y.8</td><td>0,942**</td><td><span class="badge-green">Valid</span></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 12. RELIABILITAS & NORMALITAS -->
+            <section data-auto-animate>
+                <h2 class="anim-slide-right"><i class="ri-check-double-line icon-accent"></i> Uji Reliabilitas & Asumsi Klasik</h2>
+                <div class="bento-grid-2">
+                    <div class="bento-wrapper anim-slide-right delay-1">
+                        <div class="bento-box">
+                            <h4 style="font-size: 1.8em; margin-bottom:20px;">Tabel 5.7 Uji Reliabilitas</h4>
+                            <div class="table-wrapper">
+                                <table class="apple-table" style="font-size: 1.3em;">
+                                    <thead><tr><th>Variabel</th><th>Item</th><th>Cronbach Alpha</th><th>Status</th></tr></thead>
+                                    <tbody>
+                                        <tr><td>Promosi (X)</td><td>8</td><td style="font-weight:700; color:var(--apple-blue); font-size:1.2em;">0,982</td><td><span class="badge-green">Reliabel</span></td></tr>
+                                        <tr><td>Minat Beli (Y)</td><td>8</td><td style="font-weight:700; color:var(--apple-purple); font-size:1.2em;">0,984</td><td><span class="badge-green">Reliabel</span></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p style="font-size: 1.2em; margin-top:20px;">Instrumen kuesioner terbukti sangat reliabel dan konsisten (Alpha > 0.60).</p>
+                        </div>
+                    </div>
+                    <div class="bento-wrapper anim-slide-left delay-2">
+                        <div class="bento-box" style="background: rgba(255,255,255,0.9); border-color: #FFFFFF;">
+                            <h4 style="font-size: 1.8em; margin-bottom:20px;">Gambar 5.1 Uji Normalitas</h4>
+                            <p style="font-size: 1.4em; line-height:1.6; color:var(--text-primary);">
+                                Berdasarkan inspeksi visual grafik <b>Normal P-P Plot</b>, titik-titik observasi residual menyebar dan terdistribusi merapat mengikuti arah diagonal utama.
+                            </p>
+                            <div class="anim-scale-up delay-3" style="background: linear-gradient(135deg, var(--apple-green), #28A745); padding:20px 30px; border-radius:24px; margin-top:25px; display:flex; align-items:center; gap: 20px; box-shadow: 0 10px 25px rgba(52,199,89,0.25);">
+                                <i class="ri-checkbox-circle-fill anim-floating" style="color: white; font-size: 3em;"></i>
+                                <p style="font-size: 1.5em; color:white; margin:0; font-weight:700; letter-spacing: 0.5px;">Model Terdistribusi Secara Normal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 13. REGRESI & DETERMINASI -->
+            <section data-auto-animate>
+                <h2 class="anim-slide-right"><i class="ri-line-chart-fill icon-accent"></i> Analisis Regresi & Determinasi</h2>
+                <div class="bento-grid-2">
+                    <div class="bento-wrapper anim-slide-right delay-1">
+                        <div class="bento-box" style="padding: 30px;">
+                            <h4 style="font-size: 1.6em; margin-bottom:20px;">Tabel 5.8 Regresi Linear Sederhana</h4>
+                            <div class="table-wrapper">
+                                <table class="apple-table" style="font-size: 1.2em;">
+                                    <thead>
+                                        <tr><th>Model</th><th>Unstandardized B</th><th>t Hitung</th><th>Sig.</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td style="color:var(--text-secondary);">Constant</td><td>3.259</td><td>1.694</td><td>.094</td></tr>
+                                        <tr style="background:#F5F5F7;"><td style="font-weight:700; color:var(--text-primary);">TOTAL_X</td><td style="font-weight:700; color:var(--apple-blue); font-size:1.3em;">.867</td><td style="font-weight:700; color:var(--text-primary);">15.406</td><td><span class="badge-purple">&lt;,001</span></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p style="font-size:1.1em; color:var(--text-secondary); margin-top:10px;">Nilai signifikansi &lt; 0.05 menunjukkan pengaruh yang nyata (signifikan).</p>
+                        </div>
+                    </div>
+                    <div class="bento-wrapper anim-slide-left delay-2">
+                        <div class="bento-box" style="padding: 30px; display:flex; flex-direction:column; justify-content:space-between;">
+                            <div>
+                                <h4 style="font-size: 1.6em; margin-bottom:20px;">Tabel 5.10 Koefisien Determinasi</h4>
+                                <div class="table-wrapper">
+                                    <table class="apple-table" style="font-size: 1.2em;">
+                                        <thead><tr><th>R</th><th>R Square</th><th>Adjusted R²</th></tr></thead>
+                                        <tbody>
+                                            <tr><td style="font-weight:700;">.844</td><td style="font-weight:700; color:var(--apple-pink); font-size: 1.4em;">.712</td><td>.709</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <div class="anim-scale-up delay-3" style="text-align: center; margin-top: 20px;">
+                                <p style="margin:0; font-size:1.1em; text-transform:uppercase; letter-spacing:3px; color:var(--text-secondary); font-weight:700; font-family:'Inter', sans-serif;">Kekuatan Pengaruh Promosi</p>
+                                <h3 style="font-size:6em; line-height:1; margin:10px 0; font-family:'Inter', -apple-system, sans-serif !important; font-weight:800; letter-spacing: -3px;" class="glow-apple-3">71,2%</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 14. KESIMPULAN & SARAN -->
+            <section data-auto-animate>
+                <h2 class="anim-slide-right"><i class="ri-flag-2-fill icon-accent"></i> Konklusi & Rekomendasi</h2>
+                <div class="bento-grid-2">
+                    <div class="bento-wrapper anim-slide-right delay-1">
+                        <div class="bento-box" style="background: rgba(255,255,255,0.9); border-color: #FFFFFF;">
+                            <div class="bento-icon-wrapper anim-floating" style="color: white; width: 70px; height: 70px; font-size:2em; background:linear-gradient(135deg, var(--apple-blue), var(--apple-cyan)); border:none; box-shadow: 0 10px 20px rgba(0,122,255,0.25);"><i class="ri-lightbulb-flash-fill"></i></div>
+                            <h4 style="font-size: 2em; margin-bottom:15px;">Kesimpulan Utama</h4>
+                            <p style="font-size: 1.4em; color: var(--text-primary);">Promosi terbukti <b style="color:var(--apple-blue);">berpengaruh secara positif dan signifikan</b> terhadap minat beli konsumen Rumah Makan Langkat.</p>
+                            <p style="font-size: 1.4em; color: var(--text-secondary);">Kontribusi pengaruh variabel Promosi (X) mencapai angka yang dominan yakni <b style="color:var(--apple-blue);">71,2%</b>, sisanya 28,8% dijelaskan oleh variabel tak terukur (Kualitas Pelayanan, Harga, Lokasi, dll).</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bento-wrapper anim-slide-left delay-2">
+                        <div class="bento-box">
+                            <div class="bento-icon-wrapper anim-floating" style="color: white; width: 70px; height: 70px; font-size:2em; background:linear-gradient(135deg, var(--apple-purple), var(--apple-pink)); border:none; box-shadow: 0 10px 20px rgba(175,82,222,0.25);"><i class="ri-rocket-2-fill"></i></div>
+                            <h4 style="font-size: 2em; margin-bottom:15px;">Saran Praktis</h4>
+                            <p class="anim-fade-up delay-3" style="font-size: 1.3em; margin-bottom:20px; color:var(--text-primary);"><i class="ri-focus-2-fill" style="color:var(--apple-blue); margin-right:10px;"></i><b>Tingkatkan Visual Promosi:</b> Perbanyak produksi konten foto/video resolusi tinggi dan adakan paket promosi berbatas waktu (diskon flash).</p>
+                            <p class="anim-fade-up delay-4" style="font-size: 1.3em; color:var(--text-primary);"><i class="ri-smartphone-fill" style="color:var(--apple-purple); margin-right:10px;"></i><b>Optimasi Digital:</b> Perluas penetrasi ke media sosial secara intensif, dan berikan respon seketika (real-time) atas pertanyaan konsumen via platform digital.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 15. CLOSING -->
+            <section class="center-slide" data-auto-animate>
+                <div class="anim-zoom-in" style="background: #FFFFFF; border: 1px solid rgba(0,0,0,0.05); width: 180px; height: 180px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 50px auto; box-shadow: 0 20px 50px rgba(0,0,0,0.04);">
+                    <i class="ri-graduation-cap-fill icon-accent anim-floating" style="font-size: 6.5em;"></i>
+                </div>
+                <h1 class="anim-fade-up delay-1 glow-apple-1" style="font-size:8.5em; margin-bottom:20px;">Terima Kasih</h1>
+                <p class="anim-fade-up delay-2" style="font-size:2.5em; color:var(--text-secondary); font-weight:600; letter-spacing: 3px; text-transform: uppercase;">Atas Perhatian Dewan Penguji</p>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            controls: true, progress: true, center: true, hash: true,
+            transition: 'none', transitionSpeed: 'fast',
+            width: 1920, height: 1080, margin: 0.01, minScale: 0.2, maxScale: 3.0,
+            
+            // Enable auto-animate for that cinematic "Magic Move" feel
+            autoAnimateEasing: 'cubic-bezier(0.2, 0.8, 0.2, 1)',
+            autoAnimateDuration: 0.8,
+            autoAnimateUnmatched: true
+        });
+    </script>
+</body>
+</html>

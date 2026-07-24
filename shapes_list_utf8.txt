@@ -1,0 +1,138 @@
+﻿--- SLIDE 1 ---
+- Shape: TextFrame | Name: Freeform 2
+- Shape: TextFrame | Name: Freeform 3
+- Shape: TextFrame | Name: Freeform 4
+- Shape: TextFrame | Name: Freeform 5
+- Shape: TextFrame | Name: Freeform 6
+- Shape: TextFrame | Name: Freeform 7
+- Shape: TextFrame | Name: Freeform 8
+- Shape: TextFrame | Name: Freeform 9
+- Shape: TextFrame | Name: Freeform 10
+- Shape: TextFrame | Name: Freeform 11
+- Shape: TextFrame | Name: Freeform 12
+- Shape: TextFrame | Name: Freeform 13
+- Shape: TextFrame | Name: TextBox 14
+- Shape: TextFrame | Name: TextBox 15
+- Shape: TextFrame | Name: TextBox 16
+- Shape: Image | Name: Picture 19
+--- SLIDE 2 ---
+- Shape: Group | Name: Group 2
+- Shape: TextFrame | Name: Freeform 5
+- Shape: TextFrame | Name: TextBox 6
+- Shape: TextFrame | Name: Freeform 7
+- Shape: TextFrame | Name: Freeform 8
+- Shape: TextFrame | Name: Freeform 9
+- Shape: Image | Name: Picture 10
+--- SLIDE 3 ---
+- Shape: TextFrame | Name: Freeform 2
+- Shape: TextFrame | Name: TextBox 3
+- Shape: TextFrame | Name: Freeform 4
+- Shape: Image | Name: Picture 7
+--- SLIDE 4 ---
+- Shape: TextFrame | Name: Freeform 2
+- Shape: TextFrame | Name: TextBox 3
+- Shape: TextFrame | Name: Freeform 4
+- Shape: Image | Name: Picture 6
+--- SLIDE 5 ---
+- Shape: TextFrame | Name: Freeform 2
+- Shape: TextFrame | Name: Freeform 3
+- Shape: TextFrame | Name: Freeform 4
+- Shape: TextFrame | Name: Freeform 5
+- Shape: TextFrame | Name: Freeform 6
+- Shape: TextFrame | Name: Freeform 7
+- Shape: TextFrame | Name: TextBox 8
+- Shape: TextFrame | Name: Freeform 9
+- Shape: TextFrame | Name: Freeform 10
+- Shape: TextFrame | Name: Freeform 11
+- Shape: TextFrame | Name: Freeform 12
+- Shape: TextFrame | Name: TextBox 13
+- Shape: TextFrame | Name: Freeform 14
+--- SLIDE 6 ---
+- Shape: TextFrame | Name: Freeform 2
+- Shape: TextFrame | Name: Freeform 3
+- Shape: TextFrame | Name: Freeform 4
+- Shape: TextFrame | Name: Freeform 5
+- Shape: TextFrame | Name: TextBox 6
+- Shape: TextFrame | Name: TextBox 7
+- Shape: TextFrame | Name: Freeform 8
+- Shape: Image | Name: Picture 9
+--- SLIDE 7 ---
+- Shape: TextFrame | Name: Freeform 2
+- Shape: TextFrame | Name: Freeform 3
+- Shape: TextFrame | Name: Freeform 4
+- Shape: TextFrame | Name: Freeform 5
+- Shape: TextFrame | Name: Freeform 6
+- Shape: TextFrame | Name: Freeform 7
+- Shape: TextFrame | Name: Freeform 8
+- Shape: TextFrame | Name: TextBox 9
+- Shape: TextFrame | Name: Freeform 10
+- Shape: TextFrame | Name: Freeform 12
+- Shape: TextFrame | Name: TextBox 13
+- Shape: TextFrame | Name: Freeform 14
+- Shape: TextFrame | Name: Freeform 15
+- Shape: TextFrame | Name: TextBox 16
+- Shape: TextFrame | Name: TextBox 17
+- Shape: Image | Name: Picture 17
+--- SLIDE 8 ---
+- Shape: TextFrame | Name: Freeform 2
+- Shape: TextFrame | Name: Freeform 3
+- Shape: TextFrame | Name: Freeform 4
+- Shape: TextFrame | Name: Freeform 5
+- Shape: TextFrame | Name: TextBox 9
+- Shape: Image | Name: Picture 5
+- Shape: Image | Name: Picture 7
+--- SLIDE 9 ---
+- Shape: TextFrame | Name: Freeform 2
+- Shape: TextFrame | Name: Freeform 3
+- Shape: TextFrame | Name: Freeform 4
+- Shape: TextFrame | Name: Freeform 5
+- Shape: TextFrame | Name: TextBox 9
+- Shape: TextFrame | Name: Text Box 5
+- Shape: TextFrame | Name: Text Box 7
+--- SLIDE 10 ---
+- Shape: TextFrame | Name: Freeform 2
+- Shape: TextFrame | Name: Freeform 3
+- Shape: TextFrame | Name: Freeform 4
+- Shape: TextFrame | Name: Freeform 5
+- Shape: TextFrame | Name: TextBox 9
+- Shape: TextFrame | Name: Text Box 5
+- Shape: Image | Name: Picture 7
+--- SLIDE 11 ---
+- Shape: TextFrame | Name: Freeform 2
+- Shape: TextFrame | Name: Freeform 3
+- Shape: TextFrame | Name: Freeform 4
+- Shape: TextFrame | Name: Freeform 5
+- Shape: TextFrame | Name: TextBox 9
+- Shape: TextFrame | Name: Text Box 5
+- Shape: TextFrame | Name: Text Box 9
+- Shape: TextFrame | Name: TextBox 6
+--- SLIDE 12 ---
+- Shape: TextFrame | Name: Freeform 2
+- Shape: TextFrame | Name: Freeform 3
+- Shape: TextFrame | Name: Freeform 4
+- Shape: TextFrame | Name: TextBox 9
+- Shape: TextFrame | Name: Text Box 14
+- Shape: TextFrame | Name: Text Box 15
+- Shape: TextFrame | Name: Text Box 17
+- Shape: TextFrame | Name: Text Box 19
+- Shape: TextFrame | Name: Text Box 21
+- Shape: TextFrame | Name: Text Box 23
+- Shape: Image | Name: Picture 4
+- Shape: Image | Name: Picture 5
+- Shape: Image | Name: Picture 9
+- Shape: Image | Name: Picture 10
+- Shape: Image | Name: Picture 11
+- Shape: Image | Name: Picture 24
+- Shape: Image | Name: Picture 25
+- Shape: Image | Name: Picture 26
+--- SLIDE 13 ---
+- Shape: TextFrame | Name: Freeform 2
+- Shape: TextFrame | Name: Freeform 3
+- Shape: TextFrame | Name: Freeform 4
+- Shape: TextFrame | Name: TextBox 9
+- Shape: TextFrame | Name: Text Box 4
+--- SLIDE 14 ---
+- Shape: TextFrame | Name: Freeform 2
+- Shape: TextFrame | Name: Freeform 3
+- Shape: TextFrame | Name: Freeform 4
+- Shape: TextFrame | Name: TextBox 9
